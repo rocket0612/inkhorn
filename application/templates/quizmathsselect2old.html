@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+   
+    <h1>Select Quiz</h1>
+
+    <div>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Quiz No.</th>
+                <th scope="col">Title</th>
+                <th scope="col">Take Quiz</th>
+            </tr>
+            </thead>
+            
+            <tbody>
+
+            <!-- Construct the rest of courses here -->
+            {% for data in quizzes %}
+            <tr>
+                <td scope='row'>{{ data["quiz_id"] }}</td>
+                <td>{{ data["quiz_title"] }}</td>
+                <td>
+                    <!-- this data will pass to the enrollment -->
+                        <form action="{{url_for('quizstartmaths')}}" method="POST">
+                        <input type="hidden" name="quiz_id" value="{{data['quiz_level'] }}">
+                        <button>Take Quiz</button>
+                    </form>
+                    </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}

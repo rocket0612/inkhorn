@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+  
+            {% if session['username'] %}
+            
+                <br>
+             <table class="table table" width=300px><tr>
+                 <td style="text-align:center">
+                     <a href="{{url_for('quizreadingselect1') }}" class="button2">Reading Quizzes</a>
+                     <a href="{{url_for('quizmathsselect1') }}" class="button1">Maths Quizzes</a></td>
+                 </tr>
+             </table>
+             
+            {% else %}
+                <p>Already registered? <a href="{{url_for('login') }}">Login to continue</a></p>
+            {% endif %}
+                
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

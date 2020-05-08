@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container-fluid text-center top-container">
+
+        
+        {% for post in quizzes() %}
+                <p><img src="static/{{ post.url }}"></p>
+                <table class="center">
+                <tr><td>Question 1: {{ post.question1 }}</td><td></td></tr>
+                <tr><td><form action="{{url_for('quizsubmit')}}" method="POST">
+                <fieldset id="group1">
+                <input type="radio" name="options1" value="a" required> a: {{ post.a }} <br>
+                <input type="radio" name="options1" value="b"> b: {{ post.b }} <br>
+                <input type="radio" name="options1" value="c"> c: {{ post.c }} <br>
+                </td></tr></table><br></fieldset>
+
+                <table class="center">
+                <tr><td>Question 2: {{ post.question2 }}</td><td></td></tr>
+                <tr><td><fieldset id="group2">
+                <input type="radio" name="options2" value="d" required> a: {{ post.d }} <br>
+                <input type="radio" name="options2" value="e"> b: {{ post.e }} <br>
+                <input type="radio" name="options2" value="f"> c: {{ post.f }} <br>
+                </td></tr></table><br></fieldset>
+
+                <table class="center">
+                <tr><td>Question 3: {{ post.question3 }}</td><td></td></tr>
+                <tr><td><fieldset id="group3">
+                <input type="radio" name="options3" value="g" required>  a: {{ post.g }} <br>
+                <input type="radio" name="options3" value="h"> b: {{ post.h }} <br>
+                <input type="radio" name="options3" value="i"> c: {{ post.i }} <br>
+                </td></tr></table><br></fieldset>
+
+                <table class="center">
+                <tr><td>Question 4: {{ post.question4 }}</td><td></td></tr>
+                <tr><td><fieldset id="group4">
+                <input type="radio" name="options4" value="j" required> a: {{ post.j }} <br>
+                <input type="radio" name="options4" value="k"> b: {{ post.k }} <br>
+                <input type="radio" name="options4" value="l"> c: {{ post.l }} <br>
+                </td></tr></table><br></fieldset>
+
+                <table class="center">
+                <tr><td>Question 5: {{ post.question5 }}</td><td></td></tr>
+                <tr><td><fieldset id="group5">
+                <input type="radio" name="options5" value="m" required> a: {{ post.m }} <br>
+                <input type="radio" name="options5" value="n"> b: {{ post.n }} <br>
+                <input type="radio" name="options5" value="o"> c: {{ post.o }} <br>
+                </td></tr></table><br></fieldset>
+                <button>Check Answers</button>
+            </form>
+                
+
+        {% endfor %}
+
+            </div>
+
+{% endblock %}

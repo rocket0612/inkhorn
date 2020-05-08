@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block content %}
+   
+    <h1>Select Quiz</h1>
+
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                <th scope="col">Worb Problem Quizzes</th>
+                <th scope="col">Choice</th>
+            </tr>
+            </thead>
+            
+            <tbody>                                     
+            <tr>
+                <td>Word Problems Level 2</td>
+                <td>
+                       <form action="{{url_for('quizmathsselect2')}}" method="POST">
+                        <input type="hidden" name="quiz_level" value="2">   
+                        <button>Select</button>
+                    </form>
+                    </td>
+            </tr>
+
+            <tr>
+                <td>Word Problems Level 3</td>
+                <td>
+                       <form action="{{url_for('quizmathsselect2')}}" method="POST">
+                        <input type="hidden" name="quiz_level" value="3">   
+                        <button>Select</button>
+                    </form>
+                    </td>
+            </tr>
+
+            <tr>
+                <td>Word Problems Level 4</td>
+                <td>
+                       <form action="{{url_for('quizmathsselect2')}}" method="POST">
+                        <input type="hidden" name="quiz_level" value="4">   
+                        <button>Select</button>
+                    </form>
+                    </td>
+            </tr>
+
+            <tr>
+                <td>Word Problems Level 5</td>
+                <td>
+                       <form action="{{url_for('quizmathsselect2')}}" method="POST">
+                        <input type="hidden" name="quiz_level" value="5">   
+                        <button>Select</button>
+                    </form>
+                    </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <table class="table table-hover"><br/>
+        <thead>
+            <tr>
+            <th scope="col">P6 practice Questions</th>
+            <th scope="col">Choice</th>
+        </tr>
+        </thead>
+        
+        <tbody>                                     
+        <tr>
+            <td>Paper 1</td>
+            <td>
+                   <form action="{{url_for('quizmathsselect2')}}" method="POST">
+                    <input type="hidden" name="paper" value="1">   
+                    <button>Select</button>
+                </form>
+                </td>
+        </tr>
+
+        <tr>
+            <td>Paper 2</td>
+            <td>
+                   <form action="{{url_for('quizmathsselect2')}}" method="POST">
+                    <input type="hidden" name="paper" value="2">   
+                    <button>Select</button>
+                </form>
+                </td>
+        </tr>
+
+    </tbody>
+</table>
+</div>
+
+{% endblock %}

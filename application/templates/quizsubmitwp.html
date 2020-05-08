@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="container-fluid text-center top-container">
+        <img src="static/images/rucsac.jpg"><br>
+        <br>
+                <table class="center">
+                <tr><td>Question 1: {{ quiz_data[0]["question1"] }}</td></tr>
+                <tr><td>a: {{ quiz_data[0]["a"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["b"] }} </td></tr>
+                <tr><td>c: {{ quiz_data[0]["c"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["d"] }} </td></tr>
+                {% if ch1 == quiz_data[0]["answer1"] %}
+                <tr class="correct"><td>Your answer: {{ ch1 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch1 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer1"] }}</td></tr>
+                {% endif %}
+                </table><br>
+                
+                <table class="center">
+                <tr><td>Question 2: {{ quiz_data[0]["question2"] }}</td></tr>
+                <tr><td>d: {{ quiz_data[0]["e"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["f"] }} </td></tr>
+                <tr><td>c: {{ quiz_data[0]["g"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["h"] }} </td></tr>
+                {% if ch2 == quiz_data[0]["answer2"] %}
+                <tr class="correct"><td>Your answer: {{ ch2 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch2 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer2"] }}</td></tr>
+                {% endif %}
+                </table><br>
+            
+                <table class="center">
+                <tr><td>Question 3: {{ quiz_data[0]["question3"] }}</td></tr>
+                <tr><td>a: {{ quiz_data[0]["i"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["j"] }} </td></tr>
+                <tr><td>c: {{ quiz_data[0]["k"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["l"] }} </td></tr>
+                {% if ch3 == quiz_data[0]["answer3"] %}
+                <tr class="correct"><td>Your answer: {{ ch3 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch3 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer3"] }}</td></tr>
+                {% endif %}
+                </table><br>
+                
+                <table class="center">
+                <tr><td>Question 4: {{ quiz_data[0]["question4"] }}</td></tr>
+                <tr><td>a: {{ quiz_data[0]["m"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["n"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["o"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["p"] }} </td></tr>
+                {% if ch4 == quiz_data[0]["answer4"] %}
+                <tr class="correct"><td>Your answer: {{ ch4 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch4 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer4"] }}</td></tr>
+                {% endif %}
+                </table><br>
+                
+                <table class="center">
+                <tr><td>Question 5: {{ quiz_data[0]["question5"] }}</td></tr>
+                <tr><td>a: {{ quiz_data[0]["q"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["r"] }} </td></tr>
+                <tr><td>c: {{ quiz_data[0]["s"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["t"] }} </td></tr>
+                {% if ch5 == quiz_data[0]["answer5"] %}
+                <tr class="correct"><td>Your answer: {{ ch5 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch5 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer5"] }}</td></tr>
+                {% endif %}
+                </table><br>
+                        
+                <table class="center">
+                <tr><td>Question 6: {{ quiz_data[0]["question6"] }}</td></tr>
+                <tr><td>a: {{ quiz_data[0]["u"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["v"] }} </td></tr>
+                <tr><td>c: {{ quiz_data[0]["w"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["x"] }} </td></tr>
+                {% if ch6 == quiz_data[0]["answer6"] %}
+                <tr class="correct"><td>Your answer: {{ ch6 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch6 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer6"] }}</td></tr>
+                {% endif %}
+                </table><br>
+
+                <table class="center">
+                <tr><td>Question 7: {{ quiz_data[0]["question7"] }}</td></tr>
+                <tr><td>a: {{ quiz_data[0]["y"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["z"] }} </td></tr>
+                <tr><td>c: {{ quiz_data[0]["aa"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["ab"] }} </td></tr>
+                {% if ch7 == quiz_data[0]["answer7"] %}
+                <tr class="correct"><td>Your answer: {{ ch7 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch7 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer7"] }}</td></tr>
+                {% endif %}
+                </table><br>
+
+                {% if table_name == "tt" %}
+                <table class="center">
+                <tr><td>Question 8: {{ quiz_data[0]["question8"] }}</td></tr>
+                <tr><td>a: {{ quiz_data[0]["y"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["z"] }} </td></tr>
+                <tr><td>c: {{ quiz_data[0]["aa"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["ab"] }} </td></tr>
+                {% if ch8 == quiz_data[0]["answer8"] %}
+                <tr class="correct"><td>Your answer: {{ ch8 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch8 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer8"] }}</td></tr>
+                {% endif %}
+                </table><br>
+
+                <table class="center">
+                <tr><td>Question 9: {{ quiz_data[0]["question9"] }}</td></tr>
+                <tr><td>a: {{ quiz_data[0]["y"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["z"] }} </td></tr>
+                <tr><td>c: {{ quiz_data[0]["aa"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["ab"] }} </td></tr>
+                {% if ch9 == quiz_data[0]["answer9"] %}
+                <tr class="correct"><td>Your answer: {{ ch9 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch9 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer9"] }}</td></tr>
+                {% endif %}
+                </table><br>
+
+                <table class="center">
+                <tr><td>Question 10: {{ quiz_data[0]["question10"] }}</td></tr>
+                <tr><td>a: {{ quiz_data[0]["y"] }} </td></tr>
+                <tr><td>b: {{ quiz_data[0]["z"] }} </td></tr>
+                <tr><td>c: {{ quiz_data[0]["aa"] }} </td></tr>
+                <tr><td>d: {{ quiz_data[0]["ab"] }} </td></tr>
+                {% if ch10 == quiz_data[0]["answer10"] %}
+                <tr class="correct"><td>Your answer: {{ ch10 }} - correct!</td></tr>
+                {% else %}
+                <tr class="incorrect"><td>Your answer: {{ ch10 }} - incorrect</td></tr>
+                <tr class="correctans"><td>The correct answer is {{ quiz_data[0]["answer10"] }}</td></tr>
+                {% endif %}
+                </table><br>
+                
+
+                {% endif %}
+            
+    </div>
+
+{% endblock %}
